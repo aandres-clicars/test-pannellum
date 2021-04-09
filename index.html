@@ -11,6 +11,11 @@
 	width: 600px;
 	height: 400px;
 }
+    .custom-hotspot {
+	    height: 50px;
+	    width: 50px;
+	    background: #f00;
+    }
 		</style>
 	</head>
 	<body>
@@ -28,12 +33,20 @@
 											{
 															"pitch": -4.50,
 															"yaw": -30.45,
+															"cssClass": "custom-hotspot",
 															"type": "info",
-															"text": "Fiat",
-															"URL": "https://clicars.com/"
+															"text": "El volante",
+															"URL": "https://clicars.com/",
+															"clickHandlerFunc": clickHotspot,
+															"clickHandlerArgs": "Volante"
 														},
 										]
 						});
+			// Hotspot click function
+			function clickHotspot(e, args) {
+							alert('hotspot ' + args);
+							return;
+						}
 		</script>
 
 		<a href="./base.html">base</a>
